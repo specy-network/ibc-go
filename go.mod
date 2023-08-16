@@ -5,10 +5,10 @@ module github.com/cosmos/ibc-go/v4
 retract [v4.0.0, v4.1.0] // depends on SDK version without dragonberry fix
 
 retract (
-	[v4.0.0, v4.1.0] // depends on SDK version without dragonberry fix
-	v4.1.1 // contains huckleberry vulnerability
-	v4.2.0 // contains huckleberry vulnerability
 	v4.3.0 // contains huckleberry vulnerability
+	v4.2.0 // contains huckleberry vulnerability
+	v4.1.1 // contains huckleberry vulnerability
+	[v4.0.0, v4.1.0] // depends on SDK version without dragonberry fix
 )
 
 require (

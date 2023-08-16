@@ -24,3 +24,18 @@ func GetQueryCmd() *cobra.Command {
 
 	return icaQueryCmd
 }
+func GetTxCmd() *cobra.Command {
+	icaTxCmd := &cobra.Command{
+		Use:                        "interchain-accounts",
+		Aliases:                    []string{"ica"},
+		Short:                      "interchain-accounts subcommands",
+		DisableFlagParsing:         true,
+		SuggestionsMinimumDistance: 2,
+	}
+
+	icaTxCmd.AddCommand(
+		hostcli.NewTxCmd(),
+	)
+
+	return icaTxCmd
+}
